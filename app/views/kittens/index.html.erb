@@ -1,0 +1,8 @@
+<h1>All kittens</h1>
+
+<%= button_to 'Add new kitten', new_kitten_path, method: :get %>
+<ul>
+  <% @kittens.each do |k| %>
+    <li><%= link_to k.name, k %></li>
+  <% end %>
+</ul>
