@@ -1,3 +1,5 @@
 <h1>Edit Kitten</h1>
 
+<%= button_to 'Delete', @kitten, method: :delete %>
+
 <%= render 'form', kitten: @kitten %>

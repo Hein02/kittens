@@ -3,6 +3,6 @@
 <%= button_to 'Add new kitten', new_kitten_path, method: :get %>
 <ul>
   <% @kittens.each do |k| %>
-    <li><%= link_to k.name, k %></li>
+    <li><%= link_to k.name, k %>  <%= link_to 'Delete', kitten_path(k), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %></li>
   <% end %>
 </ul>
